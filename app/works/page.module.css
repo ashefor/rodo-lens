@@ -1,0 +1,83 @@
+.hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px 60px;
+  background: #000;
+}
+
+.pageTitle {
+  font-family: var(--font-title);
+  font-size: clamp(64px, 10vw, 144px);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.worksSection {
+  padding: 60px 40px 100px;
+  background: #000;
+}
+
+.worksGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.ctaSection {
+  padding: 60px 40px 100px;
+  background: #000;
+  text-align: center;
+}
+
+.viewMore {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 32px;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.viewMore:hover {
+  background: #fff;
+  color: #000;
+}
+
+@media (max-width: 1024px) {
+  .worksGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 40px;
+  }
+
+  .worksSection {
+    padding: 40px 20px 60px;
+  }
+
+  .worksGrid {
+    gap: 24px;
+  }
+
+  .ctaSection {
+    padding: 40px 20px 60px;
+  }
+
+  .viewMore {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}

@@ -1,0 +1,126 @@
+.faqSection {
+  padding: 100px 40px;
+  background: #000;
+}
+
+.faqContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.faqLeft {
+  display: flex;
+  align-items: flex-start;
+}
+
+.faqTitle {
+  font-family: var(--font-title);
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.faqRight {
+  display: flex;
+  align-items: center;
+}
+
+.contactSection {
+  background: var(--accent);
+  padding: 80px 40px;
+}
+
+.contactContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contactText {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.whatsapp {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: opacity 0.3s;
+}
+
+.whatsapp:hover {
+  opacity: 0.8;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.socialLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.socialLinks a:hover {
+  color: #000;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .faqContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .faqTitle {
+    font-size: 36px;
+  }
+
+  .whatsapp {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faqSection,
+  .contactSection {
+    padding: 60px 20px;
+  }
+
+  .faqTitle {
+    font-size: 28px;
+  }
+
+  .whatsapp {
+    font-size: 28px;
+  }
+
+  .socialLinks {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .socialLinks a {
+    font-size: 16px;
+  }
+}

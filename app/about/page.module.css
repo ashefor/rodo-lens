@@ -1,0 +1,167 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px 80px;
+  background: #000;
+}
+
+.heroContent {
+  max-width: 900px;
+  text-align: center;
+}
+
+.pageTitle {
+  font-family: var(--font-title);
+  font-size: clamp(64px, 10vw, 144px);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.description {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.description p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+
+.description strong {
+  color: #fff;
+}
+
+.statsSection {
+  padding: 100px 40px;
+  background: #0a0a0a;
+}
+
+.statsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumber {
+  font-family: var(--font-title);
+  font-size: clamp(48px, 8vw, 72px);
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.statLabel {
+  font-size: 18px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sampleWorksSection {
+  padding: 100px 40px;
+  background: #000;
+  position: relative;
+}
+
+.sectionTitleWrapper {
+  position: sticky;
+  top: 120px;
+  text-align: center;
+  margin-bottom: 80px;
+  z-index: 1;
+  padding: 20px 0;
+  background: #000;
+}
+
+.sectionTitle {
+  font-family: var(--font-title);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.worksGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.row1,
+.row2,
+.row3 {
+  display: flex;
+  gap: 24px;
+}
+
+.row1,
+.row3 {
+  justify-content: space-between;
+}
+
+.row2 {
+  justify-content: center;
+}
+
+.ctaWrapper {
+  text-align: center;
+  margin-top: 120px;
+}
+
+@media (max-width: 1024px) {
+  .statsContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sectionTitleWrapper {
+    position: relative;
+    top: 0;
+  }
+
+  .worksGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .row1,
+  .row2,
+  .row3 {
+    display: contents;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 60px;
+  }
+
+  .description p {
+    font-size: 16px;
+  }
+
+  .statsSection,
+  .sampleWorksSection {
+    padding: 60px 20px;
+  }
+
+  .worksGrid {
+    grid-template-columns: 1fr;
+  }
+}

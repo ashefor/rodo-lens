@@ -1,0 +1,159 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('data:image/svg+xml,<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg"><rect fill="%23111" width="1920" height="1080"/></svg>');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.heroContent {
+  text-align: center;
+  z-index: 1;
+  padding: 20px;
+}
+
+.helperText {
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  margin: 40px 0;
+}
+
+.heroTitle h1 {
+  font-family: var(--font-title);
+  font-size: clamp(64px, 10vw, 144px);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.titleLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.decorLeft,
+.decorRight {
+  font-size: clamp(32px, 5vw, 72px);
+  color: var(--accent);
+}
+
+.professionalSection {
+  padding: 100px 40px;
+  background: #000;
+}
+
+.professionalContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 68% 25%;
+  gap: 7%;
+  align-items: start;
+}
+
+.professionalText {
+  position: sticky;
+  top: 120px;
+}
+
+.professionalText h2 {
+  font-family: var(--font-title);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: var(--accent);
+}
+
+.professionalText p {
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+
+.professionalCards {
+  min-height: 200vh;
+}
+
+.cardScroll {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.testimonialsSection {
+  padding: 100px 40px;
+  background: #000;
+}
+
+.testimonialTitle {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonialTitle h2 {
+  font-family: var(--font-title);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+@media (max-width: 1024px) {
+  .professionalContainer {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .professionalText {
+    position: relative;
+    top: 0;
+  }
+
+  .professionalCards {
+    min-height: auto;
+  }
+
+  .cardScroll {
+    position: relative;
+    top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .professionalSection,
+  .testimonialsSection {
+    padding: 60px 20px;
+  }
+
+  .titleLine {
+    gap: 20px;
+  }
+
+  .cardScroll {
+    grid-template-columns: 1fr;
+  }
+}
